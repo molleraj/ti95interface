@@ -6,9 +6,9 @@ Plans for building the interface will be added in the future. I will be selling 
 
 Schematic (Arduino to TI-95 Dockbus):  
 <pre>
-`GND     -> 10`  
-`(PWM) 7 ->  6`  
-`(PWM) 6 ->  3`  
+GND     -> 10  
+(PWM) 7 ->  6  
+(PWM) 6 ->  3  
 </pre>
 
 ti95_receive.sh - to receive files from the TI-95 on the PC.  
