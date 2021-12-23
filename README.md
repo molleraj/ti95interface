@@ -5,9 +5,11 @@ All files in this repository related to the Arduino Uno-based replacment TI-95 c
 Plans for building the interface will be added in the future. I will be selling pre-built interfaces soon. The primary issue right now is to fix the PC to TI-95 send script/send routines.
 
 Schematic (Arduino to TI-95 Dockbus):  
+<pre>
 `GND     -> 10`  
 `(PWM) 7 ->  6`  
 `(PWM) 6 ->  3`  
+</pre>
 
 ti95_receive.sh - to receive files from the TI-95 on the PC.  
 Syntax: `ti95_receive.sh <output_filename>` 
