@@ -6,11 +6,11 @@ Currently only the Arduino Leonardo works for transmission in both directions (r
 
 Plans for building the interface will be added in the future. I will be selling pre-built interfaces soon. The primary issue right now is to fix the PC to TI-95 send script/send routines.
 
-Schematic (Arduino to TI-95 Dockbus):  
+Schematic (Arduino Uno/Leonardo to TI-95 Dockbus):  
 <pre>
-GND     -> 10  
-(PWM) 7 ->  6  
-(PWM) 6 ->  3  
+GND      -> 10  
+(PWM) 10 ->  6  
+(PWM) 9  ->  3  
 </pre>
 
 ti95_receive.sh - to receive files from the TI-95 on the PC.  
