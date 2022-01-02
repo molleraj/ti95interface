@@ -20,7 +20,7 @@ Press I/O to access input/output menus first. Then select TAP for tape storage o
 Included files:
 
 ti95_receive.sh - to receive files from the TI-95 on the PC.  
-Syntax: `ti95_receive.sh </dev/ttyUSBx for Arduino> <output_filename>` 
+Syntax: `ti95_receive.sh </dev/ttyUSBx for Arduino> <output filename>` 
 
 ti95_send.sh - to send files from the PC to the TI-95.  
 Syntax: `ti95_send.sh <file to send> </dev/ttyUSBx for Arduino>` 
