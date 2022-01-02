@@ -1,6 +1,6 @@
 # TI-95 Arduino Replacement Cassette Interface
 
-All files in this repository related to the Arduino Uno-based replacment TI-95 cassette interface I am building. This interface will let you send and receive TI-95 programs from a Linux machine.
+All files in this repository are related to the Arduino Uno-based replacement TI-95 cassette interface I am building. This interface will let you send and receive TI-95 programs from a Linux machine.
 
 Plans for building the interface will be added in the future. I will be selling pre-built interfaces soon. The primary issue right now is to fix the PC to TI-95 send script/send routines.
 
