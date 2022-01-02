@@ -21,6 +21,9 @@ Syntax: `ti95_send.sh <file to send> </dev/ttyUSBx for Arduino>`
 
 ti95_send_2.sh - to send files from the PC to the TI-95, with adjustable chunk size (bytes per transfer) and delay between sending chunks.  
 Syntax: `ti95_send_2.sh <file to send> </dev/ttyUSBx for Arduino> <chunk size> <delay>`   
+
+ti95_send_leonardo.sh - to send files from the PC to the TI-95 with the Leonardo-based interface. Currently the only working send script.
+Syntax: `ti95_send_leonardo.sh <file to send> </dev/ttyUSBx for Arduino>`
   
 ti95_interface_uno.ino - sketch with send/receive PWM routines for Arduino Uno. 
 
