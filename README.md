@@ -4,7 +4,7 @@ All files in this repository are related to the Arduino Uno/Leonardo-based repla
 
 Currently only the Arduino Leonardo works for transmission in both directions (receiving from and sending to the TI-95), probably because it properly emulates hardware handshaking.
 
-Plans for building the interface will be added in the future. I will be selling pre-built interfaces soon. The primary issue right now is to fix the PC to TI-95 send script/send routines.
+Plans for building the interface will be added in the future. I will be selling pre-built interfaces soon. The primary issue right now is to document the tape file format.
 
 Schematic (Arduino Uno/Leonardo to TI-95 Dockbus):  
 <pre>
@@ -34,5 +34,7 @@ Syntax: `ti95_send_leonardo.sh <file to send> </dev/ttyUSBx for Arduino>`
 ti95_interface_uno.ino - sketch with send/receive PWM routines for Arduino Uno. 
 
 ti95_interface_leonardo.ino - sketch with send/receive PWM routines for Arduino Leonardo.
+
+ti95_interface_leonardo_final.ino - final, cleaned up sketch with send/receive PWM routines for Arduino Leonardo.
   
 lunarlander.95 - sample program received with ti95_receive.sh.  
