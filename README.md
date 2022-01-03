@@ -1,6 +1,6 @@
-# TI-95 Arduino Replacement Cassette Interface
+# CIduino7: TI-95 Arduino Replacement Cassette Interface
 
-All files in this repository are related to the Arduino Uno/Leonardo-based replacement TI-95 cassette interface I am building. This interface will let you send and receive TI-95 programs from a Linux machine. Theoretically it should work with the TI-74 BasiCalc and CC-40 as these share the same Dockbus and Hexbus physical interfaces, respectively, and probably similar cassette protocols.
+All files in this repository are related to the Arduino Uno/Leonardo-based replacement TI-95 cassette interface I am building. I decided to call it a CIduino7 as it replaces the original TI cassette interface for the 74/95, the TI CI-7. This interface will let you send and receive TI-95 programs from a Linux machine. Theoretically it should work with the TI-74 BasiCalc and CC-40 as these share the same Dockbus and Hexbus physical interfaces, respectively, and probably similar cassette protocols.
 
 Currently only the Arduino Leonardo works for transmission in both directions (receiving from and sending to the TI-95), probably because it properly emulates hardware handshaking.
 
