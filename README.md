@@ -15,7 +15,7 @@ GND      -> 10
 
 TI-95 operation:
 
-Press I/O to access input/output menus first. Then select TAP for tape storage operations (F1). Select RD (F1) to read a file from cassette (PC/Arduino) or WRT (F2) to write a file to cassette (PC/Arduino). Only run scripts on the computer (listed below) after pressing OK at "PRESS PLAY" or "PRESS RECORD" prompts.
+Press I/O to access input/output menus first. Then select TAP for tape storage operations (F1). Select RD (F1) to read a file from cassette (PC/Arduino) or WRT (F2) to write a file to cassette (PC/Arduino). Only run scripts on the computer (listed below) after pressing OK at "PRESS PLAY" or before pressing OK at "PRESS RECORD" prompts.
 
 Included files:
 
