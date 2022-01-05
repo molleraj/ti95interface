@@ -1,6 +1,6 @@
 #!/bin/bash
 # set serial conditions
-sudo stty -F $2 500000 -icrnl -imaxbel \
+sudo stty -F $2 460800 -icrnl -imaxbel \
 -opost -onlcr \
 -isig -icanon -iexten -echo -echoe -echok -echoctl -echoke
 # now send to the TI-95

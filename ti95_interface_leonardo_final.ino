@@ -26,8 +26,8 @@ volatile boolean received;
 
 void setup() {
   // put your setup code here, to run once:
-   // communicate at 500000 baud
-  Serial.begin(500000);
+   // communicate at 460800 baud
+  Serial.begin(460800);
   // Serial.setRxBufferSize(16384);
   // set TI-95 connection pins to input and output
   pinMode(INPUT_PIN, INPUT);
