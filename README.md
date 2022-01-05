@@ -21,6 +21,14 @@ TI-95 operation:
 
 Press I/O to access input/output menus first. Then select TAP for tape storage operations (F1). Select RD (F1) to read a file from cassette (PC/Arduino) or WRT (F2) to write a file to cassette (PC/Arduino). Only run scripts on the computer (listed below) after pressing OK at "PRESS PLAY" or before pressing OK at "PRESS RECORD" prompts.
 
+PC operation:
+
+Scripts are Linux compatible, tested on a GalliumOS (Ubuntu 18.04) Chromebook. They should be Mac (Unix) compatible as well. Baud rate was reduced from 500000 to 460800 to make the sketch compatible with the terminal emulator Tera Term on Windows. The serial port should be set to that of the Arduino Leonardo and 460800 baud/8 bits/no stop bit/1 parity bit (460800 8N1). Send and receive TI-95 tape format files with ASCII upload/logging in Tera Term (to be tested).
+
+Tape file format:
+
+To be documented. Once documented, it will be possible to compile keystroke listings (typed in a certain format) to tape format and back.
+
 Included files:
 
 ti95_receive.sh - to receive files from the TI-95 on the PC.  
