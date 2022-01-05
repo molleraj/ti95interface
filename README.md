@@ -29,6 +29,48 @@ Tape file format:
 
 To be documented. Once documented, it will be possible to compile keystroke listings (typed in a certain format) to tape format and back.
 
+1208 zero bytes (zero padding; time zero/one bit pulses on TI-95)
+
+FF byte
+00 05 00 00 05 84 8E byte header (unknown, constant in all programs)
+Eight 00 bytes
+
+Repeat previous structure
+
+FF byte
+Total bytes low byte, total bytes high byte, three byte ASCII filename, checksum of previous five bytes
+Eight 00 bytes
+
+Repeat previous structure
+
+1208 zero bytes (zero padding; time zero/one bit pulses on TI-95)
+
+FF byte
+Total bytes high byte, total bytes low byte, 00 byte, number of full (64 byte) records, number of bytes in final incomplete (<64 byte record) record (if present), 82 byte, checksum of previous six bytes
+Eight 00 bytes
+
+Repeat previous structure
+
+FF byte
+64 byte record (reverse program order!)
+Checksum of previous 64 bytes
+Eight 00 bytes
+
+Repeat previous structure
+
+... (repeat until all complete records encoded)
+
+FF byte
+Final record (under 64 bytes)
+Checksum of remaining previous bytes
+Eight 00 bytes
+
+Repeat previous structure
+
+FF byte (closing)
+
+Remember - all listings are in reverse order in the tape file. It also looks like the final incomplete record is only formed in multiples of 16 (10, 20, and 30h in the examples I have seen). Extra 00 bytes are placed in the beginning of the first complete record as needed (after the end of the program).
+
 Included files:
 
 ti95_receive.sh - to receive files from the TI-95 on the PC.  
