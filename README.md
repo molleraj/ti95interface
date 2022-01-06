@@ -23,7 +23,7 @@ Press I/O to access input/output menus first. Then select TAP for tape storage o
 
 PC operation:
 
-Scripts are Linux compatible, tested on a GalliumOS (Ubuntu 18.04) Chromebook. They should be Mac (Unix) compatible as well. Baud rate was reduced from 500000 to 460800 to make the sketch compatible with the terminal emulator Tera Term on Windows. The serial port should be set to that of the Arduino Leonardo and 460800 baud/8 bits/no stop bit/1 parity bit (460800 8N1). Send and receive TI-95 tape format files with hex upload/logging in RealTerm (confirmed to work on Windows 10). You can download RealTerm here: https://sourceforge.net/projects/realterm/
+Scripts are Linux compatible, tested on a GalliumOS (Ubuntu 18.04) Chromebook. They should be Mac (Unix) compatible as well. Baud rate was reduced from 500000 to 460800 to make the sketch compatible with the terminal emulator RealTerm on Windows. The serial port should be set to that of the Arduino Leonardo and 460800 baud/8 bits/no stop bit/1 parity bit (460800 8N1). Send and receive TI-95 tape format files with hex upload/logging in RealTerm (confirmed to work on Windows 10). You can download RealTerm here: https://sourceforge.net/projects/realterm/
 
 Tape file format:
 
