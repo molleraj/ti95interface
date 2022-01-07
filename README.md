@@ -25,11 +25,11 @@ Press I/O to access input/output menus first. Then select TAP for tape storage o
 
 PC operation:
 
-Scripts are Linux compatible, tested on a GalliumOS (Ubuntu 18.04) Chromebook. They should be Mac (Unix) compatible as well. Baud rate was reduced from 500000 to 460800 to make the sketch compatible with the terminal emulator RealTerm on Windows. The serial port should be set to that of the Arduino Leonardo and 460800 baud/8 bits/no stop bit/1 parity bit (460800 8N1). Send and receive TI-95 tape format files with hex upload/logging in RealTerm (confirmed to work on Windows 10). You can download RealTerm here: https://sourceforge.net/projects/realterm/
+Scripts are Linux compatible, tested on a GalliumOS (Ubuntu 18.04) Chromebook. They have not yet been tested on a Mac (Unix), but they are expected to be compatible with Unix as well. Baud rate was reduced from 500000 to 460800 to make the sketch compatible with the terminal emulator RealTerm on Windows. The serial port should be set to that of the Arduino Leonardo and 460800 baud/8 bits/no stop bit/1 parity bit (460800 8N1). Send and receive TI-95 tape format files with hex upload (send to TI-95) and logging (receive from TI-95) in RealTerm (confirmed to work on Windows 10). You can download RealTerm here: https://sourceforge.net/projects/realterm/
 
 Tape file format:
 
-To be documented. Once documented, it will be possible to compile keystroke listings (typed in a certain format) to tape format and back.
+Now that the format is documented, it will be possible to compile keystroke listings (typed in a certain format) to tape format and back.
 
 1208 zero bytes (zero padding; time zero/one bit pulses on TI-95)  
 
