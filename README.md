@@ -17,7 +17,7 @@ GND      -> 10
 (PWM) 9  ->  3  
 </pre>
 
-For reference, this is the Dockbus orientation from the back of the TI-95/TI-74
+For reference, this is the Dockbus orientation from the back of the TI-95/TI-74.
 
 <pre>
 Left side of calculator - 1--------10 (Dockbus) - right side of calculator
