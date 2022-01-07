@@ -95,4 +95,4 @@ ti95_interface_leonardo_final.ino - final, cleaned up sketch with send/receive P
   
 lunarlander.95 - sample program received with ti95_receive.sh.  
 
-(C) Abraham Moller, 2022
+&copy; Abraham Moller, 2022
