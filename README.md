@@ -17,7 +17,7 @@ GND      -> 10
 (PWM) 9  ->  3  
 </pre>
 
-For reference, this is the Dockbus orientation from the back of the TI-95/TI-74.
+For reference, this is the Dockbus orientation from the back of the TI-95/TI-74. Look on the back of the calculator for a square notch. Pin 1 is closest to the square notch and pin 10 is furthest from it.
 
 <pre>
 Left side of calculator - square notch - 1--------10 (Dockbus) - right side of calculator
