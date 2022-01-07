@@ -23,7 +23,7 @@ For reference, this is the Dockbus orientation from the back of the TI-95/TI-74.
 Left side of calculator - square notch - 1--------10 (Dockbus) - right side of calculator
 </pre>
 
-![image](/ciduino7-6.jpg)
+![image](/ciduino7-7.jpg)
 
 I constructed my CIduino7  (shown in the image above) by connecting the male end of three male to female 20 cm Dupont jumper wires to the female GND and PWM pins of an Arduino Leonardo (specified above). I connected the female ends to the 3, 6, and 10 male pins of two stacked Arduino female headers wrapped on the outside with electrical tape. This wrapped, stacked header could then be inserted into the Dockbus port on the rear of the TI-95 (and TI-74).
 
