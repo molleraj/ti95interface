@@ -8,7 +8,7 @@ All files in this repository are related to the Arduino Uno/Leonardo-based repla
 
 Currently only the Arduino Leonardo works for transmission in both directions (receiving from and sending to the TI-95), probably because it properly emulates hardware handshaking.
 
-Plans for building the interface will be added in the future. I will be selling pre-built interfaces soon. The primary issue right now is to document the tape file format.
+Plans for building the interface are described below. I am now selling pre-built interfaces for $25 plus shipping. I offer a 14 day warranty - you can return the unit within two weeks if it is not how you want it.
 
 Schematic (Arduino Uno/Leonardo to TI-95 Dockbus):  
 <pre>
@@ -16,6 +16,8 @@ GND      -> 10
 (PWM) 10 ->  6  
 (PWM) 9  ->  3  
 </pre>
+
+I constructed my CIduino7  (shown in the image above) by connecting the male end of three male to female 20 cm Dupont jumper wires to the female GND and PWM pins of an Arduino Leonardo (specified above). I connected the female ends to the 3, 6, and 10 male pins of two stacked Arduino female headers wrapped on the outside with electrical tape. This wrapped, stacked header could then be inserted into the Dockbus port on the rear of the TI-95 (and TI-74).
 
 TI-95 operation:
 
