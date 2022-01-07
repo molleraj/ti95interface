@@ -2,7 +2,7 @@
 
 Watch the demo here! https://www.youtube.com/watch?v=DMReYWH7o-4
 
-![image](/ciduino7.jpg)
+![image](/ciduino7-2.jpg)
 
 All files in this repository are related to the Arduino Uno/Leonardo-based replacement TI-95 cassette interface I am building. I decided to call it a CIduino7 as it replaces the original TI cassette interface for the 74/95, the TI CI-7. This interface will let you send and receive TI-95 programs from a Linux machine. Theoretically it should work with the TI-74 BasiCalc and CC-40 as these share the same Dockbus and Hexbus physical interfaces, respectively, and probably similar cassette protocols.
 
