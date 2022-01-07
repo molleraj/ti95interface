@@ -8,7 +8,7 @@ All files in this repository are related to the Arduino Uno/Leonardo-based repla
 
 Currently only the Arduino Leonardo works for transmission in both directions (receiving from and sending to the TI-95), probably because it properly emulates hardware handshaking.
 
-Plans for building the interface are described below. I am now selling pre-built interfaces for $25 plus shipping. I offer a 14 day warranty - you can return the unit within two weeks for a refund if it's defective or damaged.
+Plans for building the interface are described below. I am now selling pre-built interfaces for $25 plus shipping. I offer a 14 day warranty - you can return the unit within two weeks of purchase for a refund if it's defective or damaged.
 
 Schematic (Arduino Uno/Leonardo to TI-95 Dockbus):  
 <pre>
