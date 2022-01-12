@@ -1,0 +1,66 @@
+Developing a TI-95 keystroke compiler in Linux
+
+The goal of the project is to create a piece of software that will convert TI-95 keystroke listings typed on a PC into TI-95 binary tape files and back. These will require two different approaches.
+
+From keystroke listings to tape files
+
+1. Add initial 1208 zero bytes and constant header.
+2. Convert listings to bytes from start to finish.
+	2a. Convert listings line by line.
+	2b. First line is three letter ASCII name of file ("CIR" for example).
+	2c. Split lines by spaces. Each line should be a single instruction (800, +, +/-, etc.), except for multipart instructions ("GTL AA") or 		ASCII (`Hello world`).
+	2d. Check for IND instructions after each instruction.
+	2e. Check for fields after appropriate instructions. Convert to appropriate number of bytes (1 or 2).
+	2f. Check for ASCII lines (`Hello world`) and convert accordingly to ASCII bytes (20h-7Fh).
+3. Count number of bytes in converted binary file.
+4. Combine total bytes and three-letter name in first line of file to first header in program. Calculate and add checksum. Print in duplicate with eight zero bytes in between.
+5. Add another 1208 zero bytes.
+6. Divide total bytes by 16. If there is a remainder, add that to the quotient to get the total number of 16 byte blocks.
+7. Divide the number of 16 byte blocks by four. The quotient is the number of 64 byte records. The remainder times 16 is the length of the last incomplete block.
+8. Create calculated number of (empty) complete records (64 bytes).
+9. Create one incomplete record of specified length.
+10. Copy incomplete record length from beginning of binary file bytes. 
+Reverse order of copied bytes and paste into the incomplete record.
+11. Proceed complete record lengths specified into file. Reverse order 
+of copied bytes and paste into respective subsequent complete records 
+until done.
+12. Calculate checksums for each incomplete and complete record.
+13. Paste complete and incomplete records into file with eight zero byte 
+spacing between records, FF byte bookends, and checksums after each 
+record.
+14. Complete tape file with final FF byte.
+15. Save tape file to disk.
+
+From tape files to keystroke listings
+
+1. Identify header with name and byte length. Save each to respective 
+variables. Begin keystroke listing file with respective 
+three-letter name.
+2. Identify header with number of complete records and length of 
+incomplete record. Create this number of complete record and length 
+incomplete record data structure.
+3. From end of file, obtain incomplete and complete records and verify 
+checksums. Reverse byte order and copy contents to respective data 
+structure.
+4. Combine incomplete and complete records in reverse order as found in 
+file into single binary file for keystroke listing conversion.
+5. Use table to convert bytes into keystrokes. Separate complete 
+operations (e.g., +, GTL AH, INC 001) by newlines or specified delimiter 
+(even spaces would be OK, and more realistic to the calculator's LEARN 
+mode).
+	5a. Look for IND byte after every instruction byte. If IND byte found, expect nnn or X (A-Z) after it (5b).
+	5b. Check for field after instructions with fields.
+	5c. Anytime an instruction or field are complete, look for sets of ASCII bytes (20-7E) until another instruction or number (not 20-7E).
+6. Save keystroke listing file to disk.
+
+In each direction, the program (can) save an intermediate binary file 
+(direct conversion from keystrokes, not tape format).
+
+Errors:
+1. No three-letter name in input or output, or inconsistent between 
+header copies.
+2. Checksums don't match.
+3. Incorrect keystroke listing syntax (no argument where required, or 
+argument where none required).
+4. GTL a label that is not specified (no LBL).
+
