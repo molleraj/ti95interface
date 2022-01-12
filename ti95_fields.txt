@@ -1,0 +1,55 @@
+Function	Field
+CHR	nnn
+CIO	nnn or X
+COL	nn
+DEV	nnn
+DF	aaa
+INV DF	aaa
+DFA	Fx:aaa@nnnn
+DFN	Fx:aaa@aa
+DFN CLR	
+DFN Fx CLR	
+DSZ	nnn or X
+INV DSZ	nnn or X
+EXC	nnn or X
+FIX	n
+GET	aaa
+INV GET	aaa
+GTL	aa
+INV GTL	nnnn
+IF<	nnn or X
+INV IF<	nnn or X
+IF=	nnn or X
+INV IF=	nnn or X
+IF>	nnn or X
+INV IF>	nnn or X
+INC	nnn or X
+INV INC	nnn or X
+IND	nnn or X
+LBL	aa
+MRG	nnn or X or =
+NAM	aaa
+PUT	aaa
+INV PUT	aaa
+RCA	nnn or X or =
+RCB	hhhh
+RCL	nnn or X
+RD	aaa
+RF	nn
+SBA	hhh
+SBL	aa
+INV SBL	nnnn
+SF	nn
+SHW	n
+ST*	nnn or X
+ST+	nnn or X
+ST-	nnn or X
+ST/	nnn or X
+STA	nnn or X
+STB	hhhh
+STO	nnn or X
+TF	nn
+INV TF	nn
+VFY	aaa
+WID	nn
+WRT	aaa
