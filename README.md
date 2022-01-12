@@ -39,7 +39,7 @@ Note that files some times get corrupted in transfer, usually after changing ser
 
 Tape file format:
 
-Now that the format is documented, it will be possible to compile keystroke listings (typed in a certain format) to tape format and back.
+Now that the format is documented, it will be possible to compile keystroke listings (typed in a certain format) to tape format and back. I am currently implementing a simple keystroke listing compiler in bash. So far I have provided the compiler plan in compiler_steps.txt.
 
 1208 zero bytes (zero padding; time zero/one bit pulses on TI-95)  
 
