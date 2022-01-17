@@ -4,7 +4,9 @@ Watch the demo here! https://www.youtube.com/watch?v=DMReYWH7o-4
 
 ![image](/ciduino7-5.jpg)
 
-All files in this repository are related to the Arduino Uno/Leonardo-based replacement TI-95 cassette interface I am building. I decided to call it a CIduino7 as it replaces the original TI cassette interface for the 74/95, the TI CI-7. This interface will let you send and receive TI-95 programs from a Linux machine. Theoretically it should work with the TI-74 BasiCalc and CC-40 as these share the same Dockbus and Hexbus physical interfaces, respectively, and probably similar cassette protocols.
+All files in this repository are related to the Arduino Uno/Leonardo-based replacement TI-95 cassette interface I am building. I decided to call it a CIduino7 as it replaces the original TI cassette interface for the 74/95, the TI CI-7. 
+
+This interface will let you send and receive TI-95 programs from a Linux/Windows/Mac machine. It *requires* the Arduino Leonardo and a PC/Mac. Theoretically it should work with the TI-74 BasiCalc and CC-40 as these share the same Dockbus and Hexbus physical interfaces, respectively, and probably similar cassette protocols.
 
 Currently only the Arduino Leonardo works for transmission in both directions (receiving from and sending to the TI-95), probably because it properly emulates hardware handshaking.
 
@@ -29,7 +31,7 @@ I constructed my CIduino7  (shown in the image above) by connecting the male end
 
 TI-95 operation:
 
-Press I/O to access input/output menus first. Then select TAP for tape storage operations (F1). Select RD (F1) to read a file from cassette (PC/Arduino) or WRT (F2) to write a file to cassette (PC/Arduino). Only run scripts on the computer (listed below) after pressing OK at "PRESS PLAY" or before pressing OK at "PRESS RECORD" prompts.
+Press I/O to access input/output menus first. Then select TAP for tape storage operations (F1). Select RD (F1) to read a file from cassette (PC/Arduino) or WRT (F2) to write a file to cassette (PC/Arduino). Enter in the three letter designation of the file you are transferring (e.g., MLD for lunarlander.95). Only run scripts on the computer (listed below) after pressing OK at "PRESS PLAY" or before pressing OK at "PRESS RECORD" prompts.
 
 PC operation:
 
