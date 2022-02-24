@@ -6,7 +6,7 @@ Watch the demo here! https://www.youtube.com/watch?v=DMReYWH7o-4
 
 All files in this repository are related to the Arduino Uno/Leonardo-based replacement TI-95 cassette interface I am building. I decided to call it a CIduino7 as it replaces the original TI cassette interface for the 74/95, the TI CI-7. 
 
-This interface will let you send and receive TI-95 programs from a Linux/Windows/Mac machine. It thus *requires* the Arduino Leonardo and a PC/Mac. Theoretically it should work with the TI-74 BasiCalc and CC-40 as these share the same Dockbus and Hexbus physical interfaces, respectively, and probably similar cassette protocols.
+This interface will let you send and receive TI-95 programs from a Linux/Windows/Mac machine. It thus *requires* the Arduino Leonardo and a PC/Mac. Theoretically it should work with the TI-74 BasiCalc and CC-40 as these share the same Dockbus and Hexbus physical interfaces, respectively, and probably similar cassette protocols. Gregory McGill confirmed the interface works with the TI-74 on February 22, 2022.
 
 Currently only the Arduino Leonardo works for transmission in both directions (receiving from and sending to the TI-95), probably because it properly emulates hardware handshaking.
 
@@ -35,7 +35,7 @@ Press I/O to access input/output menus first. Then select TAP for tape storage o
 
 PC operation:
 
-Scripts are Linux compatible, tested on a GalliumOS (Ubuntu 18.04) Chromebook. They have not yet been tested on a Mac (Unix), but they are expected to be compatible with Unix as well. Baud rate was reduced from 500000 to 460800 to make the sketch compatible with the terminal emulator RealTerm on Windows. The serial port should be set to that of the Arduino Leonardo and 460800 baud/8 bits/no stop bit/1 parity bit (460800 8N1). Send and receive TI-95 tape format files with hex upload (send to TI-95) and logging (receive from TI-95) in RealTerm (confirmed to work on Windows 10). You can download RealTerm here: https://sourceforge.net/projects/realterm/
+Scripts are Linux compatible, tested on a GalliumOS (Ubuntu 18.04) Chromebook. They have not yet been tested on a Mac (Unix), but they are expected to be compatible with Unix as well. Baud rate was reduced from 500000 to 460800 to make the sketch compatible with the terminal emulator RealTerm on Windows. The serial port should be set to that of the Arduino Leonardo and 460800 baud/8 bits/no stop bit/1 parity bit (460800 8N1). Send and receive TI-95 tape format files with hex upload (send to TI-95) and logging (receive from TI-95) in RealTerm (confirmed to work on Windows 10). You can download RealTerm here: https://sourceforge.net/projects/realterm/. In RealTerm, make sure to NOT capture input to file as hex (leave Capture as Hex unset).
 
 Note that files some times get corrupted in transfer, usually after changing serial settings or running multiple programs that access the serial port. Make sure to inspect your file with a hex editor like hexedit, bless, xxd, or HxD. If your three letter header (e.g., HLO, MST, MLD) is incorrect or the data otherwise doesn't correspond to your program, unplug the adapter, plug it in again, and repeat the file transfer. Make sure your adapter is set to 460800 8n1. This has resolved issues in every case for me.
 
