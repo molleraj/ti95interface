@@ -9,6 +9,7 @@ From keystroke listings to tape files
 	2a. Convert listings line by line.
 	2b. First line is three letter ASCII name of file ("CIR" for example).
 	2c. Split lines by spaces. Each line should be a single instruction (800, +, +/-, etc.), except for multipart instructions ("GTL AA") or 		ASCII (`Hello world`).
+	2d. Check for INV instructions before each instruction.
 	2d. Check for IND instructions after each instruction.
 	2e. Check for fields after appropriate instructions. Convert to appropriate number of bytes (1 or 2).
 	2f. Check for ASCII lines (`Hello world`) and convert accordingly to ASCII bytes (20h-7Fh).
@@ -48,9 +49,11 @@ file into single binary file for keystroke listing conversion.
 operations (e.g., +, GTL AH, INC 001) by newlines or specified delimiter 
 (even spaces would be OK, and more realistic to the calculator's LEARN 
 mode).
-	5a. Look for IND byte after every instruction byte. If IND byte found, expect nnn or X (A-Z) after it (5b).
-	5b. Check for field after instructions with fields.
-	5c. Anytime an instruction or field are complete, look for sets of ASCII bytes (20-7E) until another instruction or number (not 20-7E).
+	5a. Look for INV byte. If so, do not place new line - wait for next instruction,
+	5b. Look for IND byte after every instruction byte. If IND byte found, expect nnn or X (A-Z) after it (5b).
+	5c. Check for field after instructions with fields.
+	5d. Anytime an instruction or field are complete, or if none are found, look for sets of ASCII bytes (20-7E) until another instruction or number (not 20-7E). Place these ASCII bytes within quotes (e.g., 'Tests:').
+	5e. Place new line after every complete instruction (INV +, SF +, SF IND +, 'Words', 800, etc.). Go back to 5a until done.
 6. Save keystroke listing file to disk.
 
 In each direction, the program (can) save an intermediate binary file 
@@ -63,4 +66,6 @@ header copies.
 3. Incorrect keystroke listing syntax (no argument where required, or 
 argument where none required).
 4. GTL a label that is not specified (no LBL).
+5. Multiple keystroke commands (not 20-7F or 80-8F bytes) on single line (except INV or IND and other instructions).
+6. Only INV or IND on a single line (these both require subsequent instructions or fields).
 
