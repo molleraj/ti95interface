@@ -105,6 +105,10 @@ ti95_interface_leonardo.ino - sketch with send/receive PWM routines for Arduino 
 
 ti95_interface_leonardo_final.ino - final, cleaned up sketch with send/receive PWM routines for Arduino Leonardo. Requires PinChangeInterrupt library (NicoHood, v1.2.9 used when I compile/upload).
   
-lunarlander.95 - sample program received with ti95_receive.sh.  
+lunarlander.95 - sample program received with ti95_receive.sh. This is a lunar lander simulation based on that for the HP 29C. Load with the filename MLD.
+
+mastermind.95 - Mastermind game for the TI-95. Load with the filename MST.
+
+hilo.95 - Hi-Lo game for the TI-95. Load with the filename HLO.
 
 &copy; Abraham Moller, 2022
